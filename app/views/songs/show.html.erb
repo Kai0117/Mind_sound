@@ -1,0 +1,11 @@
+<!-- app/views/sound_infos/show.html.erb -->
+<h2><%= @sound_info.title %> - <%= @sound_info.artist %></h2>
+<p><%= @sound_info.content %></p>
+
+<% if @spotify_cover_url.present? %>
+  <div class="album-cover">
+    <%= image_tag @spotify_cover_url, alt: "Album Cover", width: 300 %>
+  </div>
+<% else %>
+  <p>ジャケット画像がありません</p>
+<% end %>
